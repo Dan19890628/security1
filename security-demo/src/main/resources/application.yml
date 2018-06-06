@@ -1,0 +1,37 @@
+spring:
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/zznode-demo?useUnicode=yes&characterEncoding=utf8
+      username: root
+      password: 111111
+  session:
+    store-type: none
+#  redis:
+#    host:
+#    port:  配置redis地址和端口
+zznode:
+  security:
+#    browsers:
+#      loginPage: /demo-loginPage.html
+  qq:
+    app-id:
+    app-secret:
+server:
+  session:
+    timeout: 40 # 单位s，spring boot 中session失效最小时间为1min
+    store-type: REDIS
+security:
+  oauth2:
+    client:
+      client-id: zznode
+      client-secret: zznodeseceret
+      # 使用spring session管理，并且使用Redis作为session的存储。
+#zznode:
+#  security:
+#    browsers:
+#      loginType: JSON
+#    code:
+#      image:
+#        width: 100
+#        length: 4
+#        url: /user,/user/*

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+<h2>标准登录页面</h2>
+<h3>短信登录</h3>
+<form action="/authentication/smsCode" method="post">
+    <table>
+        <tr>
+            <td>手机号码:</td>
+            <td><input type="text" name="mobile" value="13211111111"></td>
+        </tr>
+        <tr>
+            <td>短信验证码:</td>
+            <td>
+                <input type="text" name="imageCode">
+                <a href="/code/smsCode?mobile=13211111111"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">登录</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
